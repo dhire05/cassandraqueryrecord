@@ -1,0 +1,47 @@
+{
+  "name": "CassandraQueryRecord",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "description": "Cassandra Connection and Query activity description",
+  "title": "CassandraQueryDB",
+  "ref": "github.com/dhire05/cassandraqueryrecord",
+
+  "inputs":[
+    {
+      "name": "ClusterIP",
+      "type": "string",	  
+      "value": "127.0.0.1",
+	  "required": true
+    },
+	{
+      "name": "Keyspace",
+      "type": "string",	  
+      "value": "sample",
+	  "required": true
+    },
+	{
+      "name": "TableName",
+      "type": "string",	  
+      "value": "employee",
+	  "required": true
+    },
+    {
+      "name": "Select",
+      "type": "string",	  
+      "value": "*",
+	  "required": true
+    },
+    {
+      "name": "Where",
+      "type": "string",	 
+      "value": "empid=104",
+	  "required": true
+    }	
+  ],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "any"
+    }
+  ]
+}
